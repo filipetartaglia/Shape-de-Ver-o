@@ -1,11 +1,14 @@
+import Image from "next/image";
+
 interface MockupProductProps {
   title: string;
   type: "book" | "checklist" | "phone";
   className?: string;
   color?: "green" | "dark" | "light";
+  imageUrl?: string;
 }
 
-export default function MockupProduct({ title, type, className = "", color = "dark" }: MockupProductProps) {
+export default function MockupProduct({ title, type, className = "", color = "dark", imageUrl }: MockupProductProps) {
   const bgColors = {
     green: "bg-brand-green-deep",
     dark: "bg-neutral-900",
@@ -20,18 +23,29 @@ export default function MockupProduct({ title, type, className = "", color = "da
 
   if (type === "book") {
     return (
-      <div className={`relative flex flex-col justify-between p-6 md:p-8 rounded-r-xl border-y border-r shadow-2xl overflow-hidden aspect-[3/4] ${bgColors[color]} ${borderColors[color]} ${className}`}>
-        <div className="absolute left-0 top-0 bottom-0 w-8 bg-black/40 border-r border-white/10 shadow-[inset_-5px_0_15px_rgba(0,0,0,0.5)]"></div>
-        <div className="relative z-10 pl-6 flex flex-col h-full justify-between">
-          <div>
-            <div className="w-12 h-1 bg-brand-green-accent mb-6"></div>
-            <h3 className={`font-headline text-3xl md:text-4xl leading-tight uppercase ${color === 'light' ? 'text-brand-black' : 'text-brand-offwhite'}`}>{title}</h3>
+      <div className={`relative flex flex-col justify-between rounded-r-xl border-y border-r shadow-2xl overflow-hidden aspect-[2/3] ${bgColors[color]} ${borderColors[color]} ${className}`}>
+        
+        {imageUrl ? (
+          <>
+            <Image src={imageUrl} alt={title} fill className="object-cover" />
+            <div className="absolute inset-0 bg-black/10"></div>
+          </>
+        ) : (
+          <div className="relative z-10 p-6 md:p-8 pl-12 flex flex-col h-full justify-between w-full">
+            <div>
+              <div className="w-12 h-1 bg-brand-green-accent mb-6"></div>
+              <h3 className={`font-headline text-3xl md:text-4xl leading-tight uppercase ${color === 'light' ? 'text-brand-black' : 'text-brand-offwhite'}`}>{title}</h3>
+            </div>
+            <div className="space-y-2">
+              <div className="h-1 w-full bg-brand-green-accent/20"></div>
+              <div className="h-1 w-2/3 bg-brand-green-accent/20"></div>
+            </div>
           </div>
-          <div className="space-y-2">
-            <div className="h-1 w-full bg-brand-green-accent/20"></div>
-            <div className="h-1 w-2/3 bg-brand-green-accent/20"></div>
-          </div>
-        </div>
+        )}
+        
+        {/* Spine overlay to give it a 3D book look */}
+        <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black/80 via-black/20 to-transparent border-r border-white/20 shadow-[inset_-2px_0_5px_rgba(0,0,0,0.5)] z-20"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-white/30 z-30 ml-1"></div>
       </div>
     );
   }

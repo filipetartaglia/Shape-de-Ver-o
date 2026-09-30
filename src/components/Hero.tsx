@@ -36,6 +36,7 @@ export default function Hero() {
             title="SHAPE DE VERÃO" 
             type="book"
             color="green"
+            imageUrl="/images/shape-de-verao-capa.jpg"
             className="w-full rotate-3 hover:rotate-0 transition-transform duration-500"
           />
         </div>

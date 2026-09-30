@@ -13,7 +13,13 @@ export default function Deliverables() {
         {/* Core Item 1 */}
         <div className="bg-brand-black text-brand-offwhite rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 lg:gap-10 items-center shadow-xl">
           <div className="w-3/4 max-w-[240px] md:w-1/3 shrink-0">
-            <MockupProduct title="SHAPE DE VERÃO" type="book" color="dark" className="w-full" />
+            <MockupProduct 
+              title="SHAPE DE VERÃO" 
+              type="book" 
+              color="dark" 
+              imageUrl="/images/shape-de-verao-capa.jpg"
+              className="w-full" 
+            />
           </div>
           <div className="w-full md:w-2/3 space-y-3">
             <span className="text-brand-green-accent font-headline text-2xl uppercase tracking-widest">Manual Principal</span>
