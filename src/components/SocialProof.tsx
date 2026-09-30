@@ -1,4 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
+import Image from "next/image";
 
 export default function SocialProof() {
   return (
@@ -28,7 +29,9 @@ export default function SocialProof() {
               </p>
             </div>
             <div className="mt-6 flex items-center gap-3">
-              <div className="w-10 h-10 bg-neutral-800 rounded-full"></div>
+              <div className="relative w-12 h-12 rounded-full overflow-hidden bg-neutral-800 shrink-0">
+                <Image src="/images/testimonial-1.jpg" alt="João Silva" fill className="object-cover" />
+              </div>
               <div>
                 <p className="font-body font-bold text-brand-offwhite text-sm">João Silva</p>
                 <p className="font-body text-xs text-neutral-500">Semana 4 Concluída</p>
@@ -47,7 +50,9 @@ export default function SocialProof() {
               </p>
             </div>
             <div className="mt-6 flex items-center gap-3">
-              <div className="w-10 h-10 bg-neutral-800 rounded-full"></div>
+              <div className="relative w-12 h-12 rounded-full overflow-hidden bg-neutral-800 shrink-0">
+                <Image src="/images/testimonial-2.jpg" alt="Lucas M." fill className="object-cover" />
+              </div>
               <div>
                 <p className="font-body font-bold text-brand-offwhite text-sm">Lucas M.</p>
                 <p className="font-body text-xs text-neutral-500">Semana 6 Concluída</p>
@@ -66,7 +71,9 @@ export default function SocialProof() {
               </p>
             </div>
             <div className="mt-6 flex items-center gap-3">
-              <div className="w-10 h-10 bg-neutral-800 rounded-full"></div>
+              <div className="relative w-12 h-12 rounded-full overflow-hidden bg-neutral-800 shrink-0">
+                <Image src="/images/testimonial-3.jpg" alt="Pedro Henrique" fill className="object-cover" />
+              </div>
               <div>
                 <p className="font-body font-bold text-brand-offwhite text-sm">Pedro Henrique</p>
                 <p className="font-body text-xs text-neutral-500">Semana 8 Concluída</p>
