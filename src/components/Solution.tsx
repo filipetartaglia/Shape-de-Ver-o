@@ -1,18 +1,32 @@
 import SectionWrapper from "./SectionWrapper";
 import CTAButton from "./CTAButton";
-import Image from "next/image";
+import MockupProduct from "./MockupProduct";
 
 export default function Solution() {
   return (
     <SectionWrapper bg="green">
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="order-2 md:order-1 relative aspect-square md:aspect-auto md:h-[600px] rounded-xl overflow-hidden shadow-2xl border border-brand-green-accent/20">
-          <Image 
-            src="/images/sistema-shape-de-verao.jpg"
-            alt="Sistema Shape de Verão"
-            fill
-            className="object-cover"
-          />
+        
+        <div className="order-2 md:order-1 relative h-full min-h-[400px] flex items-center justify-center">
+          <div className="absolute inset-0 bg-brand-green-accent/10 blur-[80px] rounded-full -z-10"></div>
+          
+          <div className="relative w-full max-w-[320px] mx-auto">
+            {/* Back Mockup (Checklist) */}
+            <div className="absolute top-4 -right-8 w-4/5 -rotate-6 opacity-80 transition-transform duration-500 hover:rotate-0 hover:z-20 hover:opacity-100">
+              <MockupProduct title="PLANO DE EXECUÇÃO" type="checklist" className="w-full text-brand-black shadow-2xl" />
+            </div>
+            
+            {/* Front Mockup (Book) */}
+            <div className="relative z-10 rotate-3 transition-transform duration-500 hover:rotate-0">
+              <MockupProduct 
+                title="SHAPE DE VERÃO" 
+                type="book" 
+                color="dark" 
+                imageUrl="/images/shape-de-verao-capa.jpg"
+                className="w-full shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
         
         <div className="order-1 md:order-2 space-y-6">
