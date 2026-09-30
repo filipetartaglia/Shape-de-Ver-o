@@ -1,6 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import CTAButton from "./CTAButton";
-import MockupPlaceholder from "./MockupPlaceholder";
+import MockupProduct from "./MockupProduct";
 
 export default function Hero() {
   return (
@@ -30,14 +30,13 @@ export default function Hero() {
           </div>
         </div>
         
-        <div className="flex-1 w-full max-w-md lg:max-w-none relative">
+        <div className="flex-1 w-full max-w-md lg:max-w-sm mx-auto relative">
           <div className="absolute inset-0 bg-brand-green-accent/20 blur-[100px] rounded-full -z-10"></div>
-          <MockupPlaceholder 
+          <MockupProduct 
             title="SHAPE DE VERÃO" 
-            subtitle="Protocolo Oficial de 8 Semanas" 
-            aspectRatio="portrait"
             type="book"
-            className="w-full h-auto shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500"
+            color="green"
+            className="w-full rotate-3 hover:rotate-0 transition-transform duration-500"
           />
         </div>
       </div>

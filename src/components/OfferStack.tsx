@@ -12,7 +12,7 @@ export default function OfferStack() {
 
         <div className="text-center space-y-4 mb-8 pt-4 md:pt-0 relative z-10">
           <h2 className="font-headline text-4xl md:text-5xl text-brand-offwhite">
-            TUDO O QUE VOCÊ LEVA HOJE
+            O QUE VOCÊ LEVA HOJE
           </h2>
         </div>
 
@@ -21,49 +21,56 @@ export default function OfferStack() {
             <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Protocolo Shape de Verão (8 semanas de estrutura)</span>
+                <span className="text-brand-offwhite">Protocolo Shape de Verão</span>
               </div>
+              <span className="text-neutral-500 font-bold hidden md:block">R$ 67</span>
             </li>
             <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Guia de Refeições Práticas (Menos improviso)</span>
+                <span className="text-brand-offwhite">Bônus #1: Guia de Refeições Práticas</span>
               </div>
+              <span className="text-neutral-500 font-bold hidden md:block">R$ 37</span>
             </li>
             <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Protocolo de Fim de Semana (Danos minimizados)</span>
+                <span className="text-brand-offwhite">Bônus #2: Protocolo de Fim de Semana</span>
               </div>
+              <span className="text-neutral-500 font-bold hidden md:block">R$ 27</span>
             </li>
             <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Sistema de Acompanhamento (Visualizar evolução)</span>
+                <span className="text-brand-offwhite">Bônus #3: Tracker Shape de Verão</span>
               </div>
+              <span className="text-neutral-500 font-bold hidden md:block">R$ 27</span>
             </li>
             <li className="flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Guia &quot;Voltei a Sair da Rotina&quot; (Retomada rápida)</span>
+                <span className="text-brand-offwhite">Bônus Especial: Guia de Retomada</span>
               </div>
+              <span className="text-neutral-500 font-bold hidden md:block">R$ 17</span>
             </li>
           </ul>
         </div>
 
         <div className="text-center space-y-4 relative z-10 bg-neutral-900/80 p-4 rounded-xl">
-          <p className="font-body text-neutral-300 max-w-lg mx-auto mb-6">
-            Se você fosse montar tudo isso sozinho, precisaria juntar informações de vários lugares diferentes. Aqui, está tudo organizado em uma única jornada.
-          </p>
           
-          <div className="space-y-2">
-            <p className="font-body text-neutral-400 uppercase tracking-widest text-sm font-bold">Valor percebido: R$ 97</p>
+          <div className="space-y-1 mb-2">
+            <p className="font-body text-neutral-400 uppercase tracking-widest text-sm font-bold">VALOR TOTAL DOS MATERIAIS</p>
             <div className="font-headline text-3xl text-neutral-500 line-through opacity-70">
-              De R$ 97
+              R$ 175
             </div>
+          </div>
+          
+          <div className="space-y-1">
+            <p className="font-body text-brand-green-accent uppercase tracking-widest text-xs font-bold bg-brand-green-accent/10 inline-block px-3 py-1 rounded">OFERTA DE HOJE</p>
             <div className="font-headline text-7xl md:text-8xl text-brand-green-accent leading-none">
-              <span className="text-4xl align-top">por R$</span>47
+              <span className="text-4xl align-top">POR R$</span>47
             </div>
+            <p className="font-body text-neutral-500 text-sm">PAGAMENTO ÚNICO</p>
           </div>
           
           <div className="pt-6 flex justify-center w-full">
