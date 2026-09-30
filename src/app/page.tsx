@@ -9,6 +9,7 @@ import Differentiator from "@/components/Differentiator";
 import Audience from "@/components/Audience";
 import NotFor from "@/components/NotFor";
 import EightWeeks from "@/components/EightWeeks";
+import SocialProof from "@/components/SocialProof";
 import OfferStack from "@/components/OfferStack";
 import Guarantee from "@/components/Guarantee";
 import FAQ from "@/components/FAQ";
@@ -30,6 +31,7 @@ export default function Home() {
       <FadeIn><Audience /></FadeIn>
       <FadeIn><NotFor /></FadeIn>
       <FadeIn><EightWeeks /></FadeIn>
+      <FadeIn><SocialProof /></FadeIn>
       <FadeIn><OfferStack /></FadeIn>
       <FadeIn><Guarantee /></FadeIn>
       <FadeIn><FAQ /></FadeIn>

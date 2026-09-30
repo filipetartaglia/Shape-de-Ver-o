@@ -11,23 +11,28 @@ export default function Solution() {
             title="SISTEMA SHAPE DE VERÃO" 
             subtitle="Tudo organizado em um só lugar"
             aspectRatio="square"
+            type="box"
             className="bg-brand-black border-brand-green-deep shadow-2xl shadow-black/50"
           />
         </div>
         
         <div className="order-1 md:order-2 space-y-6">
-          <h2 className="font-headline text-5xl md:text-7xl leading-none">
-            FOI PARA ISSO QUE O<br/>
-            <span className="text-brand-green-accent">SHAPE DE VERÃO</span><br/>
-            FOI CRIADO.
+          <h2 className="font-headline text-4xl md:text-6xl leading-none">
+            VOCÊ NÃO PRECISA DE MAIS FORÇA DE VONTADE.
           </h2>
-          <p className="font-body text-lg text-brand-offwhite/90 leading-relaxed">
-            Nós pegamos a informação dispersa e transformamos em uma jornada prática de 8 semanas. Um processo estruturado para quem não tem tempo a perder e quer chegar ao verão na sua melhor versão.
+          <p className="font-body text-lg text-brand-offwhite/90 leading-relaxed font-bold">
+            Você precisa reduzir o número de decisões que precisa tomar todos os dias.
           </p>
+          <ul className="space-y-3 font-body text-brand-offwhite/80">
+            <li><strong className="text-brand-green-accent">O que treinar?</strong> → Já está organizado.</li>
+            <li><strong className="text-brand-green-accent">O que comer?</strong> → Você tem opções práticas.</li>
+            <li><strong className="text-brand-green-accent">E o fim de semana?</strong> → Existe um protocolo.</li>
+            <li><strong className="text-brand-green-accent">Estou evoluindo?</strong> → Acompanhe os indicadores.</li>
+          </ul>
           <div className="pt-4">
              <CTAButton 
               id="cta-solution"
-              text="QUERO ESSE PLANO"
+              text="QUERO O PROTOCOLO DE 8 SEMANAS"
               variant="secondary"
             />
           </div>

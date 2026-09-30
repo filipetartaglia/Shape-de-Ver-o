@@ -6,43 +6,58 @@ export default function OfferStack() {
     <SectionWrapper bg="dark" id="oferta">
       <div className="w-full max-w-4xl mx-auto bg-neutral-900 border-2 border-brand-green-deep rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(24,59,53,0.3)] relative overflow-hidden">
         
-        {/* Badge */}
-        <div className="absolute top-0 right-0 bg-brand-green-accent text-brand-black font-headline text-xl px-8 py-2 rounded-bl-xl shadow-lg">
+        <div className="absolute top-0 right-0 bg-brand-green-accent text-brand-black font-headline text-xl px-8 py-2 rounded-bl-xl shadow-lg z-10">
           EDIÇÃO VERÃO 2026
         </div>
 
-        <div className="text-center space-y-4 mb-10 pt-4 md:pt-0">
+        <div className="text-center space-y-4 mb-8 pt-4 md:pt-0 relative z-10">
           <h2 className="font-headline text-4xl md:text-5xl text-brand-offwhite">
-            TUDO O QUE VOCÊ PRECISA PARA COMEÇAR O PROJETO
+            TUDO O QUE VOCÊ LEVA HOJE
           </h2>
         </div>
 
-        <div className="bg-brand-black rounded-xl p-6 mb-8 border border-neutral-800">
-          <ul className="space-y-4 font-body text-lg">
-            <li className="flex justify-between items-center pb-4 border-b border-neutral-800">
+        <div className="bg-brand-black rounded-xl p-6 mb-8 border border-neutral-800 relative z-10">
+          <ul className="space-y-4 font-body text-base md:text-lg">
+            <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Protocolo Shape de Verão (8 Semanas)</span>
+                <span className="text-brand-offwhite">Protocolo Shape de Verão (8 semanas de estrutura)</span>
               </div>
             </li>
-            <li className="flex justify-between items-center pb-4 border-b border-neutral-800">
+            <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Bônus: Guia de Refeições Práticas</span>
+                <span className="text-brand-offwhite">Guia de Refeições Práticas (Menos improviso)</span>
+              </div>
+            </li>
+            <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
+              <div className="flex items-center gap-3">
+                <span className="text-brand-green-accent font-bold">✓</span>
+                <span className="text-brand-offwhite">Protocolo de Fim de Semana (Danos minimizados)</span>
+              </div>
+            </li>
+            <li className="flex justify-between items-center pb-3 border-b border-neutral-800">
+              <div className="flex items-center gap-3">
+                <span className="text-brand-green-accent font-bold">✓</span>
+                <span className="text-brand-offwhite">Sistema de Acompanhamento (Visualizar evolução)</span>
               </div>
             </li>
             <li className="flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <span className="text-brand-green-accent font-bold">✓</span>
-                <span className="text-brand-offwhite">Bônus: Protocolo de Fim de Semana</span>
+                <span className="text-brand-offwhite">Guia &quot;Voltei a Sair da Rotina&quot; (Retomada rápida)</span>
               </div>
             </li>
           </ul>
         </div>
 
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 relative z-10 bg-neutral-900/80 p-4 rounded-xl">
+          <p className="font-body text-neutral-300 max-w-lg mx-auto mb-6">
+            Se você fosse montar tudo isso sozinho, precisaria juntar informações de vários lugares diferentes. Aqui, está tudo organizado em uma única jornada.
+          </p>
+          
           <div className="space-y-2">
-            <p className="font-body text-neutral-400 uppercase tracking-widest text-sm">PAGAMENTO ÚNICO</p>
+            <p className="font-body text-neutral-400 uppercase tracking-widest text-sm font-bold">Valor percebido: R$ 97</p>
             <div className="font-headline text-3xl text-neutral-500 line-through opacity-70">
               De R$ 97
             </div>
@@ -54,7 +69,8 @@ export default function OfferStack() {
           <div className="pt-6 flex justify-center w-full">
             <CTAButton 
               id="cta-offer"
-              subtext="Acesso digital imediato • 7 dias de garantia incondicional"
+              text="QUERO COMEÇAR MEU SHAPE"
+              subtext="Acesso digital imediato • 7 dias de garantia"
               className="w-full md:w-auto md:min-w-[320px]"
             />
           </div>

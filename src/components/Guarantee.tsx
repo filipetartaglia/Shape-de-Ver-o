@@ -8,9 +8,9 @@ export default function Guarantee() {
           <span className="font-headline text-5xl text-brand-black">7<span className="text-3xl">d</span></span>
         </div>
         <div className="space-y-5">
-          <h2 className="font-headline text-4xl md:text-5xl leading-tight">Você não precisa decidir no escuro. Inversão de risco total.</h2>
+          <h2 className="font-headline text-4xl md:text-5xl leading-tight">Garantia Incondicional de 7 Dias</h2>
           <p className="font-body text-brand-offwhite/90 text-lg leading-relaxed">
-            Você tem 7 dias para conhecer o material, aplicar a estrutura e decidir se o Shape de Verão faz sentido para você. <strong>Se o método não funcionar, eu mesmo devolvo todo o seu dinheiro investido.</strong> Sem letras miúdas, sem enrolação.
+            Você tem 7 dias para acessar o Shape de Verão, conhecer o material e decidir se ele faz sentido para você. Se dentro desse período você decidir que não é para você, basta solicitar o reembolso dentro da plataforma da Kiwify.
           </p>
         </div>
       </div>

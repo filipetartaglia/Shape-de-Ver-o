@@ -14,23 +14,29 @@ export default function Hero() {
             SEU PRÓXIMO <br className="hidden md:block"/>VERÃO <span className="text-brand-green-accent">COMEÇA AGORA.</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-neutral-300 max-w-xl leading-relaxed">
-            Um protocolo prático de 8 semanas para organizar treino, alimentação e execução — e trabalhar na evolução do seu físico antes do verão.
+            Um protocolo prático de 8 semanas para organizar treino, alimentação e execução — e construir um físico que você tenha orgulho de mostrar no verão.
           </p>
-          <div className="pt-6 w-full md:w-auto">
+          <div className="bg-brand-black/50 border border-brand-green-accent/20 p-4 rounded-lg inline-block">
+            <p className="font-body text-sm text-brand-offwhite font-medium">
+              <span className="text-brand-green-accent">O relógio está correndo:</span> Cada semana que você adia é uma semana a menos de evolução antes do verão.
+            </p>
+          </div>
+          <div className="pt-4 w-full md:w-auto">
             <CTAButton 
               id="cta-hero"
+              text="COMEÇAR MINHAS 8 SEMANAS"
               subtext="Acesso digital • Pagamento único • 7 dias de garantia" 
             />
           </div>
         </div>
         
         <div className="flex-1 w-full max-w-md lg:max-w-none relative">
-          {/* Decorative element */}
           <div className="absolute inset-0 bg-brand-green-accent/20 blur-[100px] rounded-full -z-10"></div>
           <MockupPlaceholder 
             title="SHAPE DE VERÃO" 
             subtitle="Protocolo Oficial de 8 Semanas" 
             aspectRatio="portrait"
+            type="book"
             className="w-full h-auto shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500"
           />
         </div>
