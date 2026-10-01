@@ -12,9 +12,6 @@ export default function SocialProof() {
           <p className="font-body text-neutral-400 text-lg">
             Resultados de quem parou de buscar dicas soltas e começou a executar o plano.
           </p>
-          <div className="inline-block mt-4 bg-yellow-500/10 border border-yellow-500/50 text-yellow-500 text-xs px-3 py-1 rounded-full uppercase tracking-widest font-bold">
-            Placeholder Interno - Substituir por reais
-          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
