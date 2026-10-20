@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
@@ -20,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${bebasNeue.variable} scroll-smooth`}>
-      <head>
+      <body className="antialiased bg-brand-offwhite text-brand-black">
+        {/* dangerouslySetInnerHTML avoids Next/React image preload of the noscript pixel URL (duplicate PageView). */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1" alt="" />`,
+          }}
+        />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -35,17 +40,6 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-      </head>
-      <body className="antialiased bg-brand-offwhite text-brand-black">
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`}
-            alt=""
-          />
-        </noscript>
         {children}
       </body>
     </html>
