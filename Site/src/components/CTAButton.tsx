@@ -20,7 +20,12 @@ export default function CTAButton({
 }: CTAButtonProps) {
   
   const handleClick = () => {
-    event("InitiateCheckout");
+    event("InitiateCheckout", {
+      content_name: "Shape de Verão - Edição Verão 2026",
+      content_category: "Protocolo Digital",
+      value: 47.0,
+      currency: "BRL",
+    });
   };
 
   const baseClasses = "flex flex-col items-center justify-center font-headline uppercase text-2xl md:text-3xl tracking-wide py-4 px-8 rounded-md transition-all duration-300 w-full md:w-auto shadow-lg hover:shadow-xl hover:-translate-y-1";

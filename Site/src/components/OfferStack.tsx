@@ -1,10 +1,47 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import SectionWrapper from "./SectionWrapper";
 import CTAButton from "./CTAButton";
+import { event } from "@/lib/pixel";
 
 export default function OfferStack() {
+  const hasTracked = useRef(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (hasTracked.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasTracked.current) {
+          hasTracked.current = true;
+          event("ViewContent", {
+            content_name: "Shape de Verão - Edição Verão 2026",
+            content_category: "Protocolo Digital",
+            value: 47.0,
+            currency: "BRL",
+          });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <SectionWrapper bg="dark" id="oferta">
-      <div className="w-full max-w-4xl mx-auto bg-neutral-900 border-2 border-brand-green-deep rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(24,59,53,0.3)] relative overflow-hidden">
+      <div 
+        ref={sectionRef}
+        className="w-full max-w-4xl mx-auto bg-neutral-900 border-2 border-brand-green-deep rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(24,59,53,0.3)] relative overflow-hidden"
+      >
         
         <div className="absolute top-0 right-0 bg-brand-green-accent text-brand-black font-headline text-xl px-8 py-2 rounded-bl-xl shadow-lg z-10">
           EDIÇÃO VERÃO 2026
