@@ -21,8 +21,8 @@ export default function Problem() {
             <div className="flex gap-4 items-start">
               <div className="w-8 h-8 shrink-0 bg-brand-green-accent text-brand-black rounded-full flex items-center justify-center font-bold font-headline text-xl mt-1">1</div>
               <div>
-                <h4 className="font-headline text-2xl text-brand-offwhite">PLANEJAR</h4>
-                <p className="font-body text-neutral-300">Saber exatamente o que precisa ser feito. O fim da improvisação.</p>
+                <h4 className="font-headline text-2xl text-brand-offwhite">PLANEJAMENTO</h4>
+                <p className="font-body text-neutral-300">Saber exatamente o que precisa ser feito antes de começar a semana. Fim da improvisação diária.</p>
               </div>
             </div>
             <div className="w-0.5 h-6 bg-brand-green-accent/30 ml-4"></div>
@@ -30,8 +30,8 @@ export default function Problem() {
             <div className="flex gap-4 items-start">
               <div className="w-8 h-8 shrink-0 bg-brand-green-accent text-brand-black rounded-full flex items-center justify-center font-bold font-headline text-xl mt-1">2</div>
               <div>
-                <h4 className="font-headline text-2xl text-brand-offwhite">EXECUTAR</h4>
-                <p className="font-body text-neutral-300">Transformar o plano em ações reais dentro da sua rotina.</p>
+                <h4 className="font-headline text-2xl text-brand-offwhite">TREINO</h4>
+                <p className="font-body text-neutral-300">Estrutura clara para você saber exatamente o que executar em cada sessão na academia.</p>
               </div>
             </div>
             <div className="w-0.5 h-6 bg-brand-green-accent/30 ml-4"></div>
@@ -39,8 +39,8 @@ export default function Problem() {
             <div className="flex gap-4 items-start">
               <div className="w-8 h-8 shrink-0 bg-brand-green-accent text-brand-black rounded-full flex items-center justify-center font-bold font-headline text-xl mt-1">3</div>
               <div>
-                <h4 className="font-headline text-2xl text-brand-offwhite">MANTER</h4>
-                <p className="font-body text-neutral-300">Continuar fazendo o que precisa ser feito, especialmente quando a motivação cai.</p>
+                <h4 className="font-headline text-2xl text-brand-offwhite">ALIMENTAÇÃO</h4>
+                <p className="font-body text-neutral-300">Orientações práticas para organizar a alimentação da rotina sem complicação e sem cálculos excessivos.</p>
               </div>
             </div>
             <div className="w-0.5 h-6 bg-brand-green-accent/30 ml-4"></div>
@@ -48,8 +48,8 @@ export default function Problem() {
             <div className="flex gap-4 items-start">
               <div className="w-8 h-8 shrink-0 bg-brand-green-accent text-brand-black rounded-full flex items-center justify-center font-bold font-headline text-xl mt-1">4</div>
               <div>
-                <h4 className="font-headline text-2xl text-brand-offwhite">ACOMPANHAR</h4>
-                <p className="font-body text-neutral-300">Medir e registrar o que está acontecendo com os seus resultados.</p>
+                <h4 className="font-headline text-2xl text-brand-offwhite">CONSISTÊNCIA</h4>
+                <p className="font-body text-neutral-300">Estratégias práticas para manter a rotina mesmo nos dias desmotivados e saber lidar com refeições fora.</p>
               </div>
             </div>
             <div className="w-0.5 h-6 bg-brand-green-accent/30 ml-4"></div>
@@ -57,8 +57,8 @@ export default function Problem() {
             <div className="flex gap-4 items-start">
               <div className="w-8 h-8 shrink-0 bg-brand-green-accent text-brand-black rounded-full flex items-center justify-center font-bold font-headline text-xl mt-1">5</div>
               <div>
-                <h4 className="font-headline text-2xl text-brand-offwhite">EVOLUIR</h4>
-                <p className="font-body text-neutral-300">A evolução é a consequência direta e matemática da execução do sistema.</p>
+                <h4 className="font-headline text-2xl text-brand-offwhite">ACOMPANHAMENTO</h4>
+                <p className="font-body text-neutral-300">Acompanhe sua execução, observe sua evolução e ajuste o que for necessário ao longo das 8 semanas.</p>
               </div>
             </div>
           </div>

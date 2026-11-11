@@ -16,7 +16,7 @@ export default function Journey() {
     <SectionWrapper bg="dark">
       <div className="text-center mb-16">
         <h2 className="font-headline text-5xl md:text-6xl text-brand-offwhite">A JORNADA DE 8 SEMANAS</h2>
-        <p className="font-body text-neutral-400 mt-4 text-lg">Um processo progressivo, desenhado para construir consistência.</p>
+        <p className="font-body text-neutral-400 mt-4 text-lg">A aplicação prática dos 5 pilares estruturada semana a semana.</p>
       </div>
 
       <div className="relative max-w-3xl mx-auto">

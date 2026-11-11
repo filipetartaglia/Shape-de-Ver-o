@@ -10,11 +10,12 @@ export default function Hero() {
           <div className="inline-block bg-brand-green-deep text-brand-green-accent font-body font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-2">
             Edição Verão 2026
           </div>
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-wide text-brand-offwhite">
-            SEU PRÓXIMO <br className="hidden md:block"/>VERÃO <span className="text-brand-green-accent">COMEÇA AGORA.</span>
+          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-wide text-brand-offwhite">
+            PARE DE COMEÇAR E PARAR. <br className="hidden md:block"/>
+            <span className="text-brand-green-accent">ORGANIZE SEU TREINO E ALIMENTAÇÃO</span> PARA EVOLUIR NAS PRÓXIMAS 8 SEMANAS.
           </h1>
           <p className="font-body text-lg md:text-xl text-neutral-300 max-w-xl leading-relaxed">
-            Um protocolo prático de 8 semanas para organizar treino, alimentação e execução — e construir um físico que você tenha orgulho de mostrar no verão.
+            Um protocolo prático para homens que querem melhorar o físico, manter a consistência e chegar ao verão com uma rotina que realmente conseguem executar.
           </p>
           <div className="bg-brand-black/50 border border-brand-green-accent/20 p-4 rounded-lg inline-block">
             <p className="font-body text-sm text-brand-offwhite font-medium">
@@ -24,7 +25,7 @@ export default function Hero() {
           <div className="pt-4 w-full md:w-auto">
             <CTAButton 
               id="cta-hero"
-              text="COMEÇAR MINHAS 8 SEMANAS"
+              text="QUERO COMEÇAR MINHAS 8 SEMANAS"
               subtext="Acesso digital • Pagamento único • 7 dias de garantia" 
             />
           </div>
