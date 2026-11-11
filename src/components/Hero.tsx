@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="inline-block bg-brand-green-deep text-brand-green-accent font-body font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-2">
             Edição Verão 2026
           </div>
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-wide text-brand-offwhite">
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.05] tracking-wide text-brand-offwhite">
             PARE DE COMEÇAR E PARAR. <br className="hidden md:block"/>
             <span className="text-brand-green-accent">ORGANIZE SEU TREINO E ALIMENTAÇÃO</span> PARA EVOLUIR NAS PRÓXIMAS 8 SEMANAS.
           </h1>
