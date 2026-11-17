@@ -1,7 +1,9 @@
 "use client";
 
-import { CHECKOUT_URL, UTM_PARAMS } from "@/lib/constants";
-import { event } from "@/lib/pixel";
+import { useState, useEffect } from "react";
+import { CHECKOUT_URL } from "@/lib/constants";
+import { buildCheckoutUrl } from "@/lib/utm";
+import { customEvent } from "@/lib/pixel";
 
 interface CTAButtonProps {
   text?: string;
@@ -11,6 +13,10 @@ interface CTAButtonProps {
   variant?: "primary" | "secondary";
 }
 
+// Module-level timestamp to prevent rapid double-clicks across CTAs
+let lastClickTimestamp = 0;
+const CLICK_COOLDOWN_MS = 1500;
+
 export default function CTAButton({ 
   text = "COMEÇAR MEU SHAPE", 
   subtext,
@@ -18,11 +24,32 @@ export default function CTAButton({
   className = "",
   variant = "primary"
 }: CTAButtonProps) {
-  
-  const handleClick = () => {
-    event("InitiateCheckout", {
+  const [checkoutHref, setCheckoutHref] = useState<string>(() => buildCheckoutUrl(CHECKOUT_URL));
+
+  useEffect(() => {
+    // Synchronize href on mount on client side with actual URL parameters
+    setCheckoutHref(buildCheckoutUrl(CHECKOUT_URL));
+  }, []);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const now = Date.now();
+    // Protection against rapid multiple clicks (debouncing clicks under 1.5s)
+    if (lastClickTimestamp > 0 && now - lastClickTimestamp < CLICK_COOLDOWN_MS) {
+      e.preventDefault();
+      return;
+    }
+    lastClickTimestamp = now;
+
+    // Refresh href on click to ensure it's completely up-to-date
+    const finalUrl = buildCheckoutUrl(CHECKOUT_URL);
+    setCheckoutHref(finalUrl);
+    e.currentTarget.href = finalUrl;
+
+    // Custom event via fbq('trackCustom') to measure button clicks without conflicting with Kiwify's official InitiateCheckout
+    customEvent("ClickCheckout", {
+      button_id: id,
+      button_text: text,
       content_name: "Shape de Verão - Edição Verão 2026",
-      content_category: "Protocolo Digital",
       value: 47.0,
       currency: "BRL",
     });
@@ -38,7 +65,7 @@ export default function CTAButton({
   return (
     <div className={`flex flex-col items-center w-full md:w-auto ${className}`}>
       <a 
-        href={`${CHECKOUT_URL}${UTM_PARAMS}`}
+        href={checkoutHref}
         id={id}
         onClick={handleClick}
         className={`${baseClasses} ${variantClasses[variant]}`}
